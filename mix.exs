@@ -10,6 +10,7 @@ defmodule ExGreenYetCore.MixProject do
       start_permanent: Mix.env() == :prod,
       name: "ExGreenYetCore",
       description: description(),
+      package: package(),
       deps: deps(),
       source_url: "https://github.com/Plangora/ex_green_yet_core"
     ]
@@ -36,5 +37,14 @@ defmodule ExGreenYetCore.MixProject do
 
   defp description do
     "Core component used in ExGreenYet for monitoring services and their depending components."
+  end
+
+  defp package() do
+    [
+      # These are the default files included in the package
+      maintainers: ["Allen Wyma"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/Plangora/ex_green_yet_core"}
+    ]
   end
 end
